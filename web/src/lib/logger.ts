@@ -3,6 +3,8 @@
  * Basiert auf modernen Logging-Practices für TypeScript
  */
 
+import { eventManager, EventType } from './events';
+
 /**
  * LogLevel Enum für verschiedene Log-Level
  */
@@ -45,6 +47,7 @@ export interface LoggerConfig {
   enableJson: boolean;
   enableTimestamp: boolean;
   enableCorrelationIds: boolean;
+  enableEvents: boolean; // Events senden aktivieren
   maxLogSize?: number;
   rotationSize?: number;
   rotationInterval?: number;
@@ -69,6 +72,7 @@ export class Logger {
       enableJson: true,
       enableTimestamp: true,
       enableCorrelationIds: true,
+      enableEvents: true, // Events standardmäßig aktivieren
       maxLogSize: 1000,
       rotationSize: 1024 * 1024, // 1MB
       rotationInterval: 60 * 60 * 1000, // 1 Stunde
@@ -93,6 +97,13 @@ export class Logger {
    */
   public setLevel(level: LogLevel): void {
     this.config.level = level;
+  }
+
+  /**
+   * Events aktivieren/deaktivieren
+   */
+  public setEnableEvents(enable: boolean): void {
+    this.config.enableEvents = enable;
   }
 
   /**
@@ -190,6 +201,11 @@ export class Logger {
       this.logToConsole(entry);
     }
 
+    // Event senden
+    if (this.config.enableEvents) {
+      this.emitLogEvent(entry);
+    }
+
     // File-Output (simuliert - in Produktion könnte dies in Dateien schreiben)
     if (this.config.enableFile) {
       // File-Logik könnte hier implementiert werden
@@ -270,6 +286,33 @@ export class Logger {
     }
 
     return parts.join(' ');
+  }
+
+  /**
+   * Event für Log-Eintrag senden
+   */
+  private emitLogEvent(entry: LogEntry): void {
+    try {
+      eventManager.emit(
+        EventType.LOG_ENTRY,
+        {
+          ...entry,
+          // Error-Objekte serialisierbar machen
+          error: entry.error ? {
+            message: entry.error.message,
+            stack: entry.error.stack,
+            name: entry.error.name,
+          } : undefined,
+        },
+        {
+          correlationId: entry.correlationId,
+          source: entry.module || 'Logger',
+        }
+      );
+    } catch (error) {
+      // Fehler beim Event-Sending nicht logger (um Zyklen zu vermeiden)
+      console.error('[Logger] Failed to emit log event:', error);
+    }
   }
 
   /**
