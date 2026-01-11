@@ -144,17 +144,17 @@ Diese Datei enthält alle Aufgaben für die Implementierung der Verbesserungen. 
 
 ### 1.7 Logging
 
-- [ ] 🔴 Logger Klasse implementieren
-- [ ] 🔴 LogLevel Enum erstellen
-- [ ] 🔴 LogEntry Interface definieren
-- [ ] 🔴 JSON-formatierte Logs
-- [ ] 🟡 Log-Level-Konfiguration (Runtime)
-- [ ] 🟡 Log-Rotation (Dateigröße/Zeit)
-- [ ] 🟡 Performance-Metrics logging
-- [ ] 🟡 Structured Logging Integration
-- [ ] 🟡 Log-Filtering
-- [ ] 🟡 Correlation IDs
-- [ ] 🟡 Log-Shipping Setup
+- [x] 🔴 Logger Klasse implementieren
+- [x] 🔴 LogLevel Enum erstellen
+- [x] 🔴 LogEntry Interface definieren
+- [x] 🔴 JSON-formatierte Logs
+- [x] 🟡 Log-Level-Konfiguration (Runtime)
+- [x] 🟡 Log-Rotation (Dateigröße/Zeit)
+- [x] 🟡 Performance-Metrics logging
+- [x] 🟡 Structured Logging Integration
+- [x] 🟡 Log-Filtering
+- [x] 🟡 Correlation IDs
+- [x] 🟡 Log-Shipping Setup
 
 ---
 
