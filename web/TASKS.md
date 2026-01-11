@@ -17,40 +17,40 @@ Diese Datei enthält alle Aufgaben für die Implementierung der Verbesserungen. 
 
 ### 1.1 Event-System
 
-- [ ] 🔴 Event-Enum definieren (EventType)
-- [ ] 🔴 EventPayload Interface erstellen
-- [ ] 🔴 EventEmitter Klasse implementieren
-- [ ] 🔴 Event-Listener Registrierung (`on`, `off`)
-- [ ] 🔴 Event Dispatching (`emit`, `emitAsync`)
-- [ ] 🟡 Event-History für Debugging implementieren
-- [ ] 🟡 Once-Listener Support
-- [ ] 🟡 Wildcard Event-Listener
-- [ ] 🟡 Event-Validation
+- [x] 🔴 Event-Enum definieren (EventType)
+- [x] 🔴 EventPayload Interface erstellen
+- [x] 🔴 EventEmitter Klasse implementieren
+- [x] 🔴 Event-Listener Registrierung (`on`, `off`)
+- [x] 🔴 Event Dispatching (`emit`, `emitAsync`)
+- [x] 🟡 Event-History für Debugging implementieren
+- [x] 🟡 Once-Listener Support
+- [x] 🟡 Wildcard Event-Listener
+- [x] 🟡 Event-Validation
 - [ ] 🟡 Unit-Tests für EventEmitter
 - [ ] 🟡 Integration in `runner.ts`
 - [ ] 🟡 Logging mit Events verbinden
 
 ### 1.2 Plugin-System
 
-- [ ] 🔴 Plugin Interface definieren
-- [ ] 🔴 Tool Interface definieren
-- [ ] 🔴 AgentDefinition Interface definieren
-- [ ] 🔴 PluginLoader implementieren
-- [ ] 🔴 PluginRegistry erstellen
-- [ ] 🔴 Plugin Discovery System
-- [ ] 🟡 Lifecycle Hooks (onLoad, onUnload)
-- [ ] 🟡 Plugin Version Management
-- [ ] 🟡 Plugin Dependency Resolution
+- [x] 🔴 Plugin Interface definieren
+- [x] 🔴 Tool Interface definieren
+- [x] 🔴 AgentDefinition Interface definieren
+- [x] 🔴 PluginLoader implementieren
+- [x] 🔴 PluginRegistry erstellen
+- [x] 🔴 Plugin Discovery System
+- [x] 🟡 Lifecycle Hooks (onLoad, onUnload)
+- [x] 🟡 Plugin Version Management
+- [x] 🟡 Plugin Dependency Resolution
 - [ ] 🟡 Test-Plugin als Beispiel
 - [ ] 🟡 Dokumentation für Plugin-Entwicklung
 - [ ] 🟡 Plugin Hot-Reload (Entwickler-Modus)
 
 ### 1.3 TypeScript Strict Mode
 
-- [ ] 🔴 `tsconfig.json` mit strict: true
-- [ ] 🔴 noImplicitAny: true
-- [ ] 🔴 strictNullChecks: true
-- [ ] 🔴 Alle TypeScript-Fehler beheben
+- [x] 🔴 `tsconfig.json` mit strict: true
+- [x] 🔴 noImplicitAny: true
+- [x] 🔴 strictNullChecks: true
+- [x] 🔴 Alle TypeScript-Fehler beheben
 - [ ] 🟡 noUncheckedIndexedAccess: true
 - [ ] 🟡 exactOptionalPropertyTypes: true
 - [ ] 🟡 Typ-Definitionen für externe Libraries
@@ -103,7 +103,7 @@ Diese Datei enthält alle Aufgaben für die Implementierung der Verbesserungen. 
 - [ ] 🟡 Request/Response-Schemas
 - [ ] 🟡 Authentifizierung beschreiben
 - [ ] 🟡 Rate Limiting dokumentieren
-- [ 🟡 Beispiel-Requests/Responses
+- [ ] 🟡 Beispiel-Requests/Responses
 
 #### DEVELOPER_GUIDE.md (neu)
 - [ ] 🟡 Plugin-Entwicklung Guide
@@ -139,7 +139,7 @@ Diese Datei enthält alle Aufgaben für die Implementierung der Verbesserungen. 
 - [ ] 🟡 Mock-Setup erstellen
 - [ ] 🟡 Test-Utilities hinzufügen
 - [ ] 🟡 Coverage-Bericht konfigurieren
-- [ 🟡 CI-Integration
+- [ ] 🟡 CI-Integration
 
 ### 1.7 Logging
 
@@ -241,7 +241,7 @@ Diese Datei enthält alle Aufgaben für die Implementierung der Verbesserungen. 
 - [ ] 🔴 Error Reporting
 - [ ] 🟡 Retry Mechanism
 - [ ] 🟡 Component HOC
-- [ 🟡 Error Boundary Tests
+- [ ] 🟡 Error Boundary Tests
 
 ### 2.8 Task-Timeline
 
