@@ -126,7 +126,7 @@ Diese Datei enthält alle Aufgaben für die Implementierung der Verbesserungen. 
 
 #### Tests schreiben
 - [x] 🔴 events.test.ts - EventManager Tests
-- [ ] 🔴 storage.test.ts - CRUD Operationen
+- [x] 🔴 storage.test.ts - CRUD Operationen
 - [ ] 🔴 runner.test.ts - Task Execution
 - [ ] 🔴 providers/*.test.ts - Provider Tests
 - [ ] 🟡 config.test.ts - Konfiguration Tests
