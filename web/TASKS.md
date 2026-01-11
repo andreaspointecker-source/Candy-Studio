@@ -115,16 +115,17 @@ Diese Datei enthält alle Aufgaben für die Implementierung der Verbesserungen. 
 ### 1.6 Unit-Tests
 
 #### Setup
-- [ ] 🔴 Jest installieren
-- [ ] 🔴 @types/jest installieren
-- [ ] 🔴 ts-jest installieren
-- [ ] 🔴 @testing-library/react installieren
-- [ ] 🔴 @testing-library/jest-dom installieren
-- [ ] 🔴 jest.config.js erstellen
-- [ ] 🔴 Test-Skripte in package.json
+- [x] 🔴 Jest installieren
+- [x] 🔴 @types/jest installieren
+- [x] 🔴 ts-jest installieren
+- [x] 🔴 @testing-library/react installieren
+- [x] 🔴 @testing-library/jest-dom installieren
+- [x] 🔴 jest.config.js erstellen
+- [x] 🔴 jest.setup.js erstellen
+- [x] 🔴 Test-Skripte in package.json
 
 #### Tests schreiben
-- [ ] 🔴 events.test.ts - EventEmitter Tests
+- [x] 🔴 events.test.ts - EventManager Tests
 - [ ] 🔴 storage.test.ts - CRUD Operationen
 - [ ] 🔴 runner.test.ts - Task Execution
 - [ ] 🔴 providers/*.test.ts - Provider Tests
@@ -136,8 +137,8 @@ Diese Datei enthält alle Aufgaben für die Implementierung der Verbesserungen. 
 - [ ] 🟡 preview.test.ts - Preview Logic
 
 #### Test-Infrastruktur
-- [ ] 🟡 Mock-Setup erstellen
-- [ ] 🟡 Test-Utilities hinzufügen
+- [x] 🟡 Mock-Setup erstellen
+- [x] 🟡 Test-Utilities hinzufügen
 - [ ] 🟡 Coverage-Bericht konfigurieren
 - [ ] 🟡 CI-Integration
 
