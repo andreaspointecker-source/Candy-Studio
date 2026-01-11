@@ -260,73 +260,73 @@ Diese Datei enthält alle Aufgaben für die Implementierung der Verbesserungen. 
 
 ### 3.1 Memory-Management
 
-- [ ] 🔴 MemoryEntry Interface
-- [ ] 🔴 MemoryManager Klasse
-- [ ] 🔴 In-Memory Store
-- [ ] 🔴 Vector Similarity Search (cosine)
-- [ ] 🟡 Memory Compression
-- [ ] 🟡 Importance Scoring
-- [ ] 🟡 Forget Mechanism
+- [x] 🔴 MemoryEntry Interface
+- [x] 🔴 MemoryManager Klasse
+- [x] 🔴 In-Memory Store
+- [x] 🔴 Vector Similarity Search (cosine)
+- [x] 🟡 Memory Compression
+- [x] 🟡 Importance Scoring
+- [x] 🟡 Forget Mechanism
 - [ ] 🟡 Memory Persistence
 - [ ] 🟡 Vector DB Integration (optional)
 
 ### 3.2 RAG-Integration
 
-- [ ] 🔴 Vector Store Interface
-- [ ] 🔴 Document Chunking
-- [ ] 🔴 Embedding Generation
-- [ ] 🔴 Retrieval System
-- [ ] 🟡 Context Building
-- [ ] 🟡 Reranking
-- [ ] 🟡 Hybrid Search (Vector + Keyword)
-- [ ] 🟡 Index Updates
+- [x] 🔴 Vector Store Interface
+- [x] 🔴 Document Chunking
+- [x] 🔴 Embedding Generation
+- [x] 🔴 Retrieval System
+- [x] 🟡 Context Building
+- [x] 🟡 Reranking
+- [x] 🟡 Hybrid Search (Vector + Keyword)
+- [x] 🟡 Index Updates
 - [ ] 🟡 Integration mit Tasks
 
 ### 3.3 Agent-Kommunikation
 
-- [ ] 🔴 AgentMessage Interface
-- [ ] 🔴 AgentCommunicator Klasse
-- [ ] 🔴 Message Bus
-- [ ] 🔴 Agent Directory
-- [ ] 🔴 Message Routing
-- [ ] 🟡 Reply Mechanism
-- [ ] 🟡 Conversation History
-- [ ] 🟡 Message Queue
-- [ ] 🟡 Timeout Handling
+- [x] 🔴 AgentMessage Interface
+- [x] 🔴 AgentCommunicator Klasse
+- [x] 🔴 Message Bus
+- [x] 🔴 Agent Directory
+- [x] 🔴 Message Routing
+- [x] 🟡 Reply Mechanism
+- [x] 🟡 Conversation History
+- [x] 🟡 Message Queue
+- [x] 🟡 Timeout Handling
 
 ### 3.4 Parallel Task Execution
 
-- [ ] 🔴 Dependency Graph Analyse
-- [ ] 🔴 Topological Sort
-- [ ] 🔴 Parallel Execution Engine
-- [ ] 🔴 Concurrency Limiting
-- [ ] 🔴 Error Aggregation
+- [x] 🔴 Dependency Graph Analyse
+- [x] 🔴 Topological Sort
+- [x] 🔴 Parallel Execution Engine
+- [x] 🔴 Concurrency Limiting
+- [x] 🔴 Error Aggregation
 - [ ] 🟡 Result Merging
 - [ ] 🟡 Worker Pools
-- [ ] 🟡 Cancellation
+- [x] 🟡 Cancellation
 - [ ] 🟡 Deadlock Detection
 
 ### 3.5 Permissions
 
-- [ ] 🔴 Permission Enum
-- [ ] 🔴 Role Interface
-- [ ] 🔴 PermissionManager Klasse
+- [x] 🔴 Permission Enum
+- [x] 🔴 Role Interface
+- [x] 🔴 PermissionManager Klasse
 - [ ] 🔴 Access Control Middleware
 - [ ] 🟡 Policy Engine
-- [ ] 🟡 Role Definitions
+- [x] 🟡 Role Definitions
 - [ ] 🟡 Permission Inheritance
-- [ ] 🟡 Resource-based Authorization
+- [x] 🟡 Resource-based Authorization
 
 ### 3.6 Context-Management
 
-- [ ] 🔴 ContextManager Klasse
-- [ ] 🔴 Context Hierarchy
-- [ ] 🔴 Context Inheritance
-- [ ] 🔴 Context Caching
-- [ ] 🔴 Context Validation
-- [ ] 🔴 Prompt Building
-- [ ] 🟡 Context Scoping
-- [ ] 🟡 Context Compression
+- [x] 🔴 ContextManager Klasse
+- [x] 🔴 Context Hierarchy
+- [x] 🔴 Context Inheritance
+- [x] 🔴 Context Caching
+- [x] 🔴 Context Validation
+- [x] 🔴 Prompt Building
+- [x] 🟡 Context Scoping
+- [x] 🟡 Context Compression
 
 ---
 
