@@ -344,27 +344,27 @@ Diese Datei enthält alle Aufgaben für die Implementierung der Verbesserungen. 
 
 ### 4.2 Workflow-Execution-Engine
 
-- [ ] 🔴 Workflow DSL definieren
-- [ ] 🔴 WorkflowNode Interface
-- [ ] 🔴 Workflow Interface
-- [ ] 🔴 Execution Engine
-- [ ] 🔴 State Management
-- [ ] 🔴 Error Handling
-- [ ] 🔴 Pause/Resume
-- [ ] 🔴 Cancellation
-- [ ] 🔴 Validation
-- [ ] 🔴 Execution State Tracking
+- [x] 🔴 Workflow DSL definieren
+- [x] 🔴 WorkflowNode Interface
+- [x] 🔴 Workflow Interface
+- [x] 🔴 Execution Engine
+- [x] 🔴 State Management
+- [x] 🔴 Error Handling
+- [x] 🔴 Pause/Resume
+- [x] 🔴 Cancellation
+- [x] 🔴 Validation
+- [x] 🔴 Execution State Tracking
 - [ ] 🟡 Workflow Versioning
 - [ ] 🟡 Workflow Templates
 
 ### 4.3 Workflow-Features
 
-- [ ] 🟡 Condition Nodes (if/else)
-- [ ] 🟡 Loop Nodes
-- [ ] 🟡 Parallel Nodes
-- [ ] 🟡 Variables/Parameters
-- [ ] 🟡 Outputs
-- [ ] 🟡 Workflow Hooks
+- [x] 🟡 Condition Nodes (if/else)
+- [x] 🟡 Loop Nodes
+- [x] 🟡 Parallel Nodes
+- [x] 🟡 Variables/Parameters
+- [x] 🟡 Outputs
+- [x] 🟡 Workflow Hooks
 - [ ] 🟡 Custom Node Types
 
 ---
