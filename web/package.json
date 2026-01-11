@@ -10,8 +10,9 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "next": "16.1.1",
+    "@xyflow/react": "^12.10.0",
     "nanoid": "^5.0.7",
+    "next": "16.1.1",
     "openai": "^4.96.2",
     "react": "19.2.3",
     "react-dom": "19.2.3",

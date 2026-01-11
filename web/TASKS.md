@@ -334,10 +334,10 @@ Diese Datei enthält alle Aufgaben für die Implementierung der Verbesserungen. 
 
 ### 4.1 Workflow-Visualisierung
 
-- [ ] 🔴 Workflow to Graph Konverter
-- [ ] 🔴 Layout Algorithmus (Dagre/ELK)
-- [ ] 🔴 Rendering Engine
-- [ ] 🔴 Interactive Elements
+- [x] 🔴 Workflow to Graph Konverter
+- [x] 🔴 Layout Algorithmus (Dagre/ELK)
+- [x] 🔴 Rendering Engine
+- [x] 🔴 Interactive Elements (Drag, Zoom, Pan)
 - [ ] 🟡 Sub-Workflows
 - [ ] 🟡 Grouping
 - [ ] 🟡 Annotations
