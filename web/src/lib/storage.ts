@@ -219,3 +219,113 @@ export async function updateProjectTimestamp(projectId: string) {
   project.meta.updatedAt = new Date().toISOString();
   await writeProjectMeta(project);
 }
+
+/**
+ * Generic Storage Wrapper
+ * 
+ * Bietet eine API für localStorage/sessionStorage, die automatisch
+ * zwischen In-Memory und Persistenz synchronisiert.
+ */
+
+// Typ-Definitionen
+type StorageValue = string | number | boolean | object | any[] | null;
+type StorageKey = string;
+
+export class Storage {
+  private prefix: string = 'kaiban-'; // Optionaler Prefix zur Vermeidung
+
+  constructor(prefix?: string) {
+    if (prefix) {
+      this.prefix = prefix;
+    }
+  }
+
+  /**
+   * Einen Wert speichern
+   */
+  setItem(key: StorageKey, value: StorageValue): void {
+    const fullKey = `${this.prefix}${key}`;
+    
+    // Im localStorage speichern
+    try {
+      localStorage.setItem(fullKey, JSON.stringify(value));
+    } catch (error) {
+      console.error(`[Storage] Failed to write to localStorage:`, error);
+    }
+  }
+
+  /**
+   * Einen Wert abrufen
+   */
+  getItem(key: StorageKey): StorageValue | null {
+    const fullKey = `${this.prefix}${key}`;
+    
+    try {
+      const item = localStorage.getItem(fullKey);
+      if (item === null) return null;
+      return JSON.parse(item);
+    } catch (error) {
+      console.error(`[Storage] Failed to read from localStorage:`, error);
+      return null;
+    }
+  }
+
+  /**
+   * Einen Wert entfernen
+   */
+  removeItem(key: StorageKey): void {
+    const fullKey = `${this.prefix}${key}`;
+    try {
+      localStorage.removeItem(fullKey);
+    } catch (error) {
+      console.error(`[Storage] Failed to remove from localStorage:`, error);
+    }
+  }
+
+  /**
+   * Alle Werte löschen
+   */
+  clear(): void {
+    // Lösche nur Keys, die mit dem Prefix beginnen, um andere Daten nicht zu löschen
+    const keysToRemove: string[] = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && key.startsWith(this.prefix)) {
+        keysToRemove.push(key);
+      }
+    }
+    keysToRemove.forEach((key) => localStorage.removeItem(key));
+  }
+
+  /**
+   * Alle Keys zurückgeben
+   */
+  getAllKeys(): string[] {
+    const keys: string[] = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && key.startsWith(this.prefix)) {
+        // Entferne den Prefix
+        keys.push(key.substring(this.prefix.length + 1)); 
+      }
+    }
+    return keys;
+  }
+
+  /**
+   * Alle Werte zurückgeben
+   */
+  getAll(): Record<string, StorageValue> {
+    const items: Record<string, StorageValue> = {};
+    this.getAllKeys().forEach((key) => {
+      const value = this.getItem(key);
+      if (value !== null) {
+        items[key] = value;
+      }
+    });
+    return items;
+  }
+}
+
+// Singleton-Instanz (damit einfach importiert werden kann)
+export const storage = new Storage();
